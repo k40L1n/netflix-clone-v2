@@ -37,7 +37,13 @@ function Banner({ netflixOriginals }: Props) {
         {movie?.overview}
       </p>
       <div className="flex space-x-3">
-        <button className="bannerButton bg-white text-black">
+        <button
+          onClick={() => {
+            setCurrentMovie(movie)
+            setShowModal(true)
+          }}
+          className="bannerButton bg-white text-black"
+        >
           <FaPlay className="h-4 w-4 text-black md:h-7 md:w-7" />
           Play
         </button>
